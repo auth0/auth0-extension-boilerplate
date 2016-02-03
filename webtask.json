@@ -1,5 +1,8 @@
 {
-  "name": "My Extension",
+  "title": "Auth0 Extension",
+  "name": "auth0-extension",
+  "version": "1.0.0",
+  "author": "John Doe",
   "description": "This is a Hello World extension",
   "type": "application",
   "keywords": [
