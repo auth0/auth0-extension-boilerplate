@@ -4,7 +4,8 @@
   "description": "My extension for ..",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "build": "wt-bundle webtask.js --prod -o ./build/bundle.js"
   },
   "keywords": [
     "auth0",
@@ -14,7 +15,7 @@
   "license": "MIT",
   "dependencies": {
     "auth0-oauth2-express": "0.0.3",
-    "express": "^4.13.3",
-    "webtask-tools": "^1.1.0"
+    "express": "4.12.4",
+    "webtask-tools": "1.2.0"
   }
 }

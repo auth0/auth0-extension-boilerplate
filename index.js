@@ -4,7 +4,7 @@ var Webtask = require('webtask-tools');
 var app     = express();
 
 app.use(auth0({
-  scopes: 'read:connections',
+  scopes: 'read:connections'
 }));
 
 app.get('/', function (req, res) {
@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
     '    <title>Auth0 Extension</title>',
     '    <script type="text/javascript">',
     '       if (!sessionStorage.getItem("token")) {',
-    '         window.location.href = "/login";',
+    '         window.location.href = "'+res.locals.baseUrl+'/login";',
     '       }',
     '    </script>',
     '  </head>',
@@ -35,8 +35,4 @@ app.get('/', function (req, res) {
   res.status(200).send(view);
 });
 
-if ((process.env.NODE_ENV || 'development') === 'development') {
-  app.listen(3000);
-} else {
-  module.exports = Webtask.fromExpress(app);
-}
+module.exports = app;

@@ -15,11 +15,7 @@
     res.status(200).send('Hello World');
   });
 
-  if ((process.env.NODE_ENV || 'development') === 'development') {
-    app.listen(3000);
-  } else {
-    module.exports = Webtask.fromExpress(app);
-  }
+  module.exports = app;
   ```
 
 ## Authenticating the extension with Auth0
@@ -36,6 +32,26 @@ A useful extension would typically use the Auth0 API. We created a module that a
     scopes: 'read:connections'
   }));
   ```
+
+## Running locally
+
+To run the sample extension locally:
+
+```bash
+$ npm install
+$ npm start
+```
+
+## Deploying to Webtask.io
+
+If you want to host your extension, you can easily  do it by using [Webtask.io](https://webtask.io). 
+
+* Install [wt-cli](https://github.com/auth0/wt-cli) - `npm install -g wt-cli`
+* Install [webtask-bundle](https://github.com/auth0/webtask-bundle) - `npm install -g webtask-bundle`
+* Run `npm run build`
+* Run `wt create ./build/bundle.js --name my-extension --no-parse --no-merge`
+
+Note: For more information about how to setup Webtask, click [here](https://webtask.io/docs/101).
 
 ## What is Auth0?
 
