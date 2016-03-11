@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
-    "build": "wt-bundle webtask.js --prod -o ./build/bundle.js",
+    "bundle": "wt-bundle webtask.js --prod -o ./build/bundle.js",
     "create": "wt create ./build/bundle.js --name my-extension --no-parse --no-merge",
-    "deploy": "npm run build && npm run create"
+    "deploy": "npm run bundle && npm run create"
   },
   "keywords": [
     "auth0",
