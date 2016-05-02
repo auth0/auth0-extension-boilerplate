@@ -47,12 +47,8 @@ $ npm start
 1. Go to [Auth0 Extensions](https://manage.auth0.com/#/extensions)
 2. Click on `+ Create Extension`
 3. Fill in the textbox with `https://github.com/auth0/auth0-extension-boilerplate`
-> ![](https://cloud.githubusercontent.com/assets/302314/14960089/4d7e1cca-1069-11e6-97fe-ea5ba156aae9.png)
 4. Click on `continue`
 5. Finally, click on `install`
->![](https://cloud.githubusercontent.com/assets/302314/14960153/8ece9362-1069-11e6-86fb-9bb647a0f789.png)
-6. The extension will be installed.
-> ![](https://cloud.githubusercontent.com/assets/302314/14960254/38245ba4-106a-11e6-8441-701c92b5f4ed.png)
 
 ## What is Auth0?
 
