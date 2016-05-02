@@ -4,8 +4,8 @@
   "description": "My extension for ..",
   "main": "index.js",
   "scripts": {
-    "start": "node server.js",
-    "bundle": "wt-bundle webtask.js -o ./build/bundle.js",
+    "start": "wt-bundle server.js -o ./build/bundle.js && node ./build/bundle.js",
+    "bundle": "wt-bundle webtask.js -o ./build/bundle.js"
   },
   "keywords": [
     "auth0",
