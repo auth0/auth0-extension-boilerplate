@@ -7,7 +7,7 @@
     "start": "wt-bundle server.js -o ./build/bundle.js && node ./build/bundle.js",
     "bundle": "wt-bundle webtask.js -o ./build/bundle.js"
   },
-  "keywords": [
+  "keywords": [ 
     "auth0",
     "extension"
   ],
